@@ -1,6 +1,5 @@
 package com.testframework.apps.internal;
 
-import com.codeborne.selenide.SelenideElement;
 import com.testframework.apps.wrappers.BaseTest;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

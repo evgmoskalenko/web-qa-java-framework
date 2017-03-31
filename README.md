@@ -1,4 +1,6 @@
-# QA Automation web framework. Java. Maven. Allure.
+# QA Automation web framework
+
+Java, Selenium, Selenide, TestNG, Maven, Allure Reports.
 
 Run in command line:
 
