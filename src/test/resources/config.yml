@@ -1,0 +1,15 @@
+#browser: [chrome, phantomjs, firefox]
+#resolution:
+#  large: 1200px
+#  default: 980px
+#  portrait_tablets: 768px
+#  phones_to_tablets: 767px
+#  phones: 480px
+#suites:
+#  smoke: /web-testframework/suites/smoke.xml
+#  regression: /web-testframework/suites/regression.xml
+environment:
+  prod:
+    baseUrl: https://google.com
+#    browser: phantomjs
+#    browser: chrome
