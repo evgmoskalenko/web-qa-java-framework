@@ -36,7 +36,7 @@ public abstract class BaseTest implements TestCase {
     @BeforeSuite(alwaysRun = true)
     public void setUp() {
         addListener(new EventListener());
-        addListener(new Highlighter());
+//        addListener(new Highlighter());
 //        configureVideoRecorder(false);
     }
 
