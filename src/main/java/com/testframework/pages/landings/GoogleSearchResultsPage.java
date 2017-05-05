@@ -11,7 +11,7 @@ import static com.codeborne.selenide.Selenide.$$;
 public class GoogleSearchResultsPage extends BasePage<GoogleSearchResultsPage> {
 
     @Override
-    public String getUrl() {
+    protected String getUrl() {
         return null;
     }
 

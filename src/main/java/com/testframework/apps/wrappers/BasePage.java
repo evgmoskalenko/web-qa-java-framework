@@ -15,7 +15,7 @@ public abstract class BasePage<T> implements PageObjectsSupplier, HelperObjectSu
         return (T) this;
     }
 
-    abstract public String getUrl();
+    protected abstract String getUrl();
 
     public T openPage() {
         open(getUrl());

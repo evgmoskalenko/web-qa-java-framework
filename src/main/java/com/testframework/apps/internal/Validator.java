@@ -18,7 +18,7 @@ public interface Validator {
     Logger logger = LogManager.getLogger(BaseTest.class);
 
     @Step("Verify characters count in string")
-    default void verifyStringCount(String s, int expectedLength) {
+    default void verifyThatStringHasCount(String s, int expectedLength) {
         int actualLength = s.length();
         if (actualLength <= expectedLength) {
             logger.info(format("Current characters: %d, and expected length: %d", actualLength, expectedLength));
@@ -35,13 +35,6 @@ public interface Validator {
             htmlToAllureReport("Browser console log entry", String.join("<br><br>", listBrowserConsoleLog));
         }
         assertTrue(condition);
-    }
-
-    @Step("Verify that response code \"{1}\" = \"{0}\"")
-    default void verifyResponseCodeEquals(final String actual, final String expected) {
-        textToAllureAsStep("Actual", actual);
-        textToAllureAsStep("Expected", expected);
-        assertEquals(actual, expected);
     }
 
     @Step("Verify that \"{1}\" = \"{0}\"")
@@ -65,20 +58,12 @@ public interface Validator {
         assertTrue(actual.contains(containsString));
     }
 
-    @Step("Verify that \"{0}\" not contains \"{1}\"")
-    default void verifyTextNotContains(final String actual, final String containsString) {
-        assertTrue(!actual.contains(containsString));
-    }
-
     @Step("Verify that url \"{0}\" contains \"{1}\"")
     default void verifyUrlContains(final String actual, final String containsString) {
         textToAllureAsStep("Actual", actual);
         textToAllureAsStep("Expected", containsString);
         assertTrue(actual.contains(containsString));
     }
-
-    @Step("Verify that code \"{0}\" is present on page")
-    default void verifyThatCodeIsPresent(String code) {}
 
 }
 

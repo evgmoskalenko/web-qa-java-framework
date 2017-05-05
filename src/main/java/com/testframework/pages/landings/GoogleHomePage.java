@@ -10,7 +10,7 @@ import static com.testframework.apps.utils.properties.SystemProperty.BASE_URL;
 public class GoogleHomePage extends BasePage<GoogleHomePage> {
 
     @Override
-    public String getUrl() {
+    protected String getUrl() {
         return BASE_URL.getValue();
     }
 
