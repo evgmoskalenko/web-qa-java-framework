@@ -19,26 +19,12 @@ public class Example extends BaseTest {
 
     @Test(priority = 10)
     public void spanCheckboxXpath() {
-        examplePage().openPage().getSpanXpath().click();
+        examplePage().openPage().getSpanXpath().get(4).click();
     }
 
     @Test(priority = 15)
     public void spanCheckboxXpath_2() {
-        examplePage().openPage().getSpanXpath().setSelected(true);
-    }
-
-    @Test(priority = 16)
-    public void spanCheckboxXpath_3() {
-        String xpath = "/html/body/div[1]/div[4]/div[2]/div[2]/div[3]/div/div[4]/div[2]/div/div[1]/div[4]/span/span";
-
-        examplePage().openPage().chooseFilterByCustomXpath(xpath).click();
-    }
-
-    @Test(priority = 17)
-    public void spanCheckboxXpath_4() {
-        String xpath = "/html/body/div[1]/div[4]/div[2]/div[2]/div[3]/div/div[4]/div[2]/div/div[1]/div[4]/span/span";
-
-        examplePage().openPage().chooseFilterByCustomXpath(xpath).setSelected(true);
+        examplePage().openPage().getSpanXpath().get(4).setSelected(true);
     }
 
     /**
@@ -54,12 +40,12 @@ public class Example extends BaseTest {
 
     @Test(priority = 20)
     public void inputCheckboxXpath() {
-        examplePage().openPage().getInputXpath().click();
+        examplePage().openPage().getInputXpath().get(4).click();
     }
 
     @Test(priority = 25)
     public void inputCheckboxXpath_2() {
-        examplePage().openPage().getInputXpath().setSelected(true);
+        examplePage().openPage().getInputXpath().get(4).setSelected(true);
     }
 
     /**
@@ -72,7 +58,7 @@ public class Example extends BaseTest {
 
     @Test(priority = 30)
     public void labelCheckboxXpath() {
-        examplePage().openPage().getLabelXpath().click();
+        examplePage().openPage().getLabelXpath().get(4).click();
     }
 
 }

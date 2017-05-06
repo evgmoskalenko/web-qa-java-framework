@@ -1,5 +1,6 @@
 package com.testframework.pages.landings;
 
+import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import com.testframework.apps.wrappers.BasePage;
 import org.apache.logging.log4j.LogManager;
@@ -7,6 +8,7 @@ import org.apache.logging.log4j.Logger;
 
 import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.$$;
 
 public class ExamplePage extends BasePage<ExamplePage> {
 
@@ -18,18 +20,18 @@ public class ExamplePage extends BasePage<ExamplePage> {
     }
 
     //<span class="checkbox__box">
-    public SelenideElement getSpanXpath() {
-     return $(byXpath("//div[@class='n-filter-panel-aside__content']/div[4]//span[@class='checkbox__box']"));
+    public ElementsCollection getSpanXpath() {
+     return $$(byXpath("//div[@class='n-filter-panel-aside__content']/div[4]//span[@class='checkbox__box']"));
     }
 
     //<input class="checkbox__control" type="checkbox" id="glf-7893318-152809">
-    public SelenideElement getInputXpath() {
-        return $(byXpath("//div[@class='n-filter-panel-aside__content']/div[4]//span[@class='checkbox__box']/input"));
+    public ElementsCollection getInputXpath() {
+        return $$(byXpath("//div[@class='n-filter-panel-aside__content']/div[4]//span[@class='checkbox__box']/input"));
     }
 
     //<label class="checkbox__label" for="glf-7893318-152898">Electrolux</label>
-    public SelenideElement getLabelXpath() {
-        return $(byXpath("//div[@class='n-filter-panel-aside__content']/div[4]//label[@class='checkbox__label']"));
+    public ElementsCollection getLabelXpath() {
+        return $$(byXpath("//div[@class='n-filter-panel-aside__content']/div[4]//label[@class='checkbox__label']"));
     }
 
     public SelenideElement chooseFilterByCustomXpath(String xpathValue) {

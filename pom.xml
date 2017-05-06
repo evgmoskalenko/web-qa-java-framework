@@ -72,6 +72,18 @@
             <version>1.5.0</version>
         </dependency>
 
+        <!--&lt;!&ndash; Selenium&ndash;&gt;-->
+        <!--<dependency>-->
+            <!--<groupId>org.seleniumhq.selenium</groupId>-->
+            <!--<artifactId>selenium-java</artifactId>-->
+            <!--<version>3.4.0</version>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>org.seleniumhq.selenium</groupId>-->
+            <!--<artifactId>selenium-firefox-driver</artifactId>-->
+            <!--<version>3.4.0</version>-->
+        <!--</dependency>-->
+
         <!-- Selenide-->
         <dependency>
             <groupId>com.codeborne</groupId>
@@ -269,6 +281,7 @@
             </activation>
             <properties>
                 <browser>chrome</browser>
+                <!--<browser>firefox</browser>-->
                 <suiteFile>smoke</suiteFile>
             </properties>
         </profile>
